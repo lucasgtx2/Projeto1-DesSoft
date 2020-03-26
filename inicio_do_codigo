@@ -1,2 +1,8 @@
 import random              
 fichas = 100
+
+print("Voce possui {0} fichas. \n".format(fichas))
+
+#código que realiza loop até que as fichas acabem
+while not fichas <= 0 : 
+    fase = "Come Out"
