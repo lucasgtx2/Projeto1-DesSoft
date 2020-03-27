@@ -6,3 +6,7 @@ print("Voce possui {0} fichas. \n".format(fichas))
 #código que realiza loop até que as fichas acabem
 while not fichas <= 0 : 
     fase = "Come Out"
+#randomizacão dos dados e armazenamento do valor da soma dos resultados na variável "soma":
+    dado1 = random.randint(1, 6)
+    dado2 = random.randint(1, 6)
+    soma = dado1 + dado2
