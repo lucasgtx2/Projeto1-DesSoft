@@ -114,3 +114,20 @@ while not fichas <= 0 :
               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado3, dado4, soma1))
 
 #código para Field na fase Point---------------------------------------------------------------------------
+              if F == "s" and fichas > 0:
+                 print("\n Field: ")   
+                 if soma1 == 5 or soma1 == 6 or soma1 == 7 or soma1 == 8:
+                    fichas = fichas - valorF
+                    print("Voce perdeu e agora tem {0} fichas".format(fichas))
+                   
+                 elif soma1 == 3 or soma1 == 4 or soma1 == 9 or soma1 == 10 or soma1 == 11: 
+                    fichas = fichas + valorF
+                    print("Voce ganhou e agora tem {0} fichas".format(fichas))   # talvez mover a impressão do valor de fihcas para o fim de cada FASE, para nao repetir tantas vezes
+                    
+                 elif soma1 == 2:
+                    fichas = fichas + 2*valorF
+                    print("Voce ganhou e agora tem {0} fichas".format(fichas))
+                    
+                 else:
+                    fichas = fichas + 3*valorF
+                    print("Voce ganhou e agora tem {0} fichas".format(fichas))
