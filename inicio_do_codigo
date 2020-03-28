@@ -109,3 +109,8 @@ while not fichas <= 0 :
               dado3 = random.randint(1, 6)
               dado4 = random.randint(1, 6)
               soma1 = dado3 + dado4
+             
+              print("Os dados serao jogados novamente")
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado3, dado4, soma1))
+
+#código para Field na fase Point---------------------------------------------------------------------------
