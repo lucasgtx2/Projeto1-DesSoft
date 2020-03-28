@@ -47,3 +47,18 @@ while not fichas <= 0 :
               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
               fichas = fichas + (3*(valorF))
               print("Voce ganhou e agora tem {0} fichas".format(fichas))
+
+#código abaixo para Any Craps na fase ComeOut---------------------------------------------------------------------------------------------------------
+                
+        if AC == "s" and fichas > 0:
+           valorAC = int(input("Quanto deseja apostar em Any Craps? "))
+                    
+           if soma == 2 or soma == 3 or soma == 12:
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
+              fichas = fichas + 7*valorAC
+              print("Voce ganhou Any Craps e agora tem {0} fichas".format(fichas))
+                    
+           else:
+               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
+               fichas = fichas - valorAC
+               print("Voce perdeu Any Craps e agora tem {0} fichas".format(fichas))
