@@ -20,3 +20,30 @@ while not fichas <= 0 :
         AC = input("Deseja apostar em Any Craps (s ou n)? ")
         T = input("Deseja apostar em Twelve (s ou n)? ")
         PLB = input("Deseja apostar em Pass Line Bet (s ou n)? ")
+
+#código separado para cada aposta, iniciando por Field e terminando com PLB ---------------------------------------------------------------------------------------------------------   
+        
+#código para Field na fase Come Out:---------------------------------------------------------------------------------------------------------
+        if F == "s" and fichas > 0:
+           valorF = int(input("Quanto deseja apostar em Field? "))     #armazena valor de fichas apostadas nessa aposta
+                    
+           if soma == 5 or soma == 6 or soma == 7 or soma == 8:
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
+              fichas = fichas - valorF
+              print("Voce perdeu Field e agora tem {0}".format(fichas))
+              break
+                   
+           elif soma == 3 or soma == 4 or soma == 9 or soma == 10 or soma == 11:
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
+              fichas = fichas + valorF
+              print("Voce ganhou e agora tem {0} fichas".format(fichas))   
+                    
+           elif soma == 2:
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
+              fichas = fichas + (2*(valorF))
+              print("Voce ganhou e agora tem {0} fichas".format(fichas))
+                    
+           else:
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
+              fichas = fichas + (3*(valorF))
+              print("Voce ganhou e agora tem {0} fichas".format(fichas))
