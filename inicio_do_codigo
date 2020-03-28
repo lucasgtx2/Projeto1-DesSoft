@@ -75,3 +75,28 @@ while not fichas <= 0 :
                print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
                fichas = fichas - valorT
                print("Voce perdeu Twelve e agora tem {0} fichas".format(fichas))
+
+#código para PLB em ComeOut----------------------------------------------------------------------------------------  
+        if PLB == "s" and fichas > 0:
+           valorPLB = int(input("Quanto deseja apostar em Pass Line Bet? "))
+            
+           if soma == 7 or soma == 11:  #aqui o jogador venceu, resultado deu 7 ou 11
+              fichas = fichas + valorPLB
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
+              print("Voce venceu e agora tem {0} fichas".format(fichas))
+                            
+           elif  soma == 2 or  soma == 3 or  soma == 12:  #aqui o jogador perdeu
+              fichas = fichas - valorPLB
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
+              print("Voce perdeu e agora tem {0} fichas".format(fichas))
+
+#---------------------------------------------------------------------------------------------------------
+           else:   #aqui vai para fase Point, pois resultado deu 4, 5, 6, 8, 9 ou 10 
+              print("O resultado dos dados e {0} e {1}, e da soma dos valores e {2}, entao voce esta na fase: POINT".format(dado1, dado2, soma))
+              print("Nessa fase, voce possui tres opcoes de aposta, alem da continuacao do Point: Field, Any Craps e Twelve.")
+              F = input("Deseja apostar em Field (s ou n)? ")
+              AC = input("Deseja apostar em Any Craps (s ou n)? ")
+              T = input("Deseja apostar em Twelve (s ou n)? ")
+              dado3 = random.randint(1, 6)
+              dado4 = random.randint(1, 6)
+              soma1 = dado3 + dado4
