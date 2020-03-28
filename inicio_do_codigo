@@ -10,3 +10,13 @@ while not fichas <= 0 :
     dado1 = random.randint(1, 6)
     dado2 = random.randint(1, 6)
     soma = dado1 + dado2
+
+#início do jogo para fase Come Out:    
+    
+    if fase == "Come Out" and fichas > 0:
+        print("Voce esta na fase: COME OUT. \n")
+        print("Nessa fase, voce possui quatro opcoes de aposta: Pass Line Bet, Field, Any Craps e Twelve. Escolha, a seguir, em quais deseja apostar: \n") 
+        F = input("Deseja apostar em Field (s ou n)? ")
+        AC = input("Deseja apostar em Any Craps (s ou n)? ")
+        T = input("Deseja apostar em Twelve (s ou n)? ")
+        PLB = input("Deseja apostar em Pass Line Bet (s ou n)? ")
