@@ -143,3 +143,12 @@ while not fichas <= 0 :
                  else: 
                     fichas = fichas - valorAC
                     print("Voce perdeu e agora tem {0} fichas".format(fichas))
+
+#código abaixo para Point somente---------------------------------------------------------------------------------------------------------
+              if soma1 == 7 and fichas > 0:
+                 fichas = fichas - valorPLB
+                 print("Voce perdeu a aposta em Point e agora tem {0} fichas".format(fichas))
+                
+              elif soma1 == soma and fichas > 0:
+                  fichas = fichas + valorPLB
+                  print("Voce ganhou a aposta em Point e agora tem {0} fichas".format(fichas))
