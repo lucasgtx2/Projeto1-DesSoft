@@ -182,3 +182,6 @@ while not fichas <= 0 :
                       elif soma1 == soma :
                           fichas = fichas + valorPLB                        
                           print("\n Voce jogou os dados {0} vezes e ganhou Point e agora tem {1} fichas".format(contagem, fichas))
+
+else:
+    print("\n GAME OVER")
