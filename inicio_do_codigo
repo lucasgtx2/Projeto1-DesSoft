@@ -164,3 +164,21 @@ while not fichas <= 0 :
               elif soma1 == soma and fichas > 0:
                   fichas = fichas + valorPLB
                   print("Voce ganhou a aposta em Point e agora tem {0} fichas".format(fichas))
+              
+              elif soma1 != 7 and soma1 != soma and fichas > 0:             
+                  contagem = 1
+                  while soma1 != soma and soma1 != 7 :          
+                      print("\n Jogando os dados novamente ate perder ou validar") 
+                      dado3 = random.randint (1, 6)
+                      dado4 = random.randint (1, 6)
+                      soma1 = dado3 + dado4
+                      contagem += 1
+                      print("Voce esta na jogada de dados {0}. O resultado dos dados e {1} e {2}, e a soma dos valores e {3}".format(contagem, dado3, dado4, soma1))  
+                            
+                      if soma1 == 7:
+                          fichas = fichas - valorPLB                       
+                          print("\n Voce jogou os dados {0} vezes e perdeu Point e agora tem {1} fichas".format(contagem, fichas))
+                    
+                      elif soma1 == soma :
+                          fichas = fichas + valorPLB                        
+                          print("\n Voce jogou os dados {0} vezes e ganhou Point e agora tem {1} fichas".format(contagem, fichas))
