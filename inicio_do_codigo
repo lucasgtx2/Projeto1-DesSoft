@@ -131,3 +131,15 @@ while not fichas <= 0 :
                  else:
                     fichas = fichas + 3*valorF
                     print("Voce ganhou e agora tem {0} fichas".format(fichas))
+
+#código abaixo para Any Craps na fase Point---------------------------------------------------------------------------------------------------------
+                
+              if AC == "s" and fichas > 0:
+                 print("\n Any Craps: ")   
+                 if soma1 == 2 or soma1 == 3 or soma1 == 12:
+                    fichas = fichas + 7*valorAC
+                    print("Voce ganhou e agora tem {0} fichas".format(fichas))
+                    
+                 else: 
+                    fichas = fichas - valorAC
+                    print("Voce perdeu e agora tem {0} fichas".format(fichas))
