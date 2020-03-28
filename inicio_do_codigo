@@ -16,17 +16,27 @@ while not fichas <= 0 :
     if fase == "Come Out" and fichas > 0:
         print("Voce esta na fase: COME OUT. \n")
         print("Nessa fase, voce possui quatro opcoes de aposta: Pass Line Bet, Field, Any Craps e Twelve. Escolha, a seguir, em quais deseja apostar: \n") 
+        
         F = input("Deseja apostar em Field (s ou n)? ")
+        if F == "s":
+            valorF = int(input("Quanto deseja apostar em Field? "))     #armazena valor de fichas apostadas nessa aposta
+        
         AC = input("Deseja apostar em Any Craps (s ou n)? ")
+        if AC == "s":
+            valorAC = int(input("Quanto deseja apostar em Any Craps? "))
+        
         T = input("Deseja apostar em Twelve (s ou n)? ")
+        if T == "s":
+            valorT = int(input("Quanto deseja apostar em Twelve? "))
+
         PLB = input("Deseja apostar em Pass Line Bet (s ou n)? ")
+        if PLB == "s":
+            valorPLB = int(input("Quanto deseja apostar em Pass Line Bet? "))
 
 #código separado para cada aposta, iniciando por Field e terminando com PLB ---------------------------------------------------------------------------------------------------------   
         
 #código para Field na fase Come Out:---------------------------------------------------------------------------------------------------------
-        if F == "s" and fichas > 0:
-           valorF = int(input("Quanto deseja apostar em Field? "))     #armazena valor de fichas apostadas nessa aposta
-                    
+        if F == "s" and fichas > 0:                   
            if soma == 5 or soma == 6 or soma == 7 or soma == 8:
               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
               fichas = fichas - valorF
@@ -51,8 +61,6 @@ while not fichas <= 0 :
 #código abaixo para Any Craps na fase ComeOut---------------------------------------------------------------------------------------------------------
                 
         if AC == "s" and fichas > 0:
-           valorAC = int(input("Quanto deseja apostar em Any Craps? "))
-                    
            if soma == 2 or soma == 3 or soma == 12:
               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
               fichas = fichas + 7*valorAC
@@ -64,9 +72,7 @@ while not fichas <= 0 :
                print("Voce perdeu Any Craps e agora tem {0} fichas".format(fichas))
 
 #código para Twelve na fase Comeout---------------------------------------------------------------------------------------------------------
-        if T == "s" and fichas > 0:
-           valorT = int(input("Quanto deseja apostar em Twelve? "))
-                    
+        if T == "s" and fichas > 0:                    
            if soma == 12:
                print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
                fichas = fichas + 30*valorT
@@ -78,8 +84,6 @@ while not fichas <= 0 :
 
 #código para PLB em ComeOut----------------------------------------------------------------------------------------  
         if PLB == "s" and fichas > 0:
-           valorPLB = int(input("Quanto deseja apostar em Pass Line Bet? "))
-            
            if soma == 7 or soma == 11:  #aqui o jogador venceu, resultado deu 7 ou 11
               fichas = fichas + valorPLB
               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
