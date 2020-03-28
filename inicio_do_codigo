@@ -62,3 +62,16 @@ while not fichas <= 0 :
                print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma)) 
                fichas = fichas - valorAC
                print("Voce perdeu Any Craps e agora tem {0} fichas".format(fichas))
+
+#código para Twelve na fase Comeout---------------------------------------------------------------------------------------------------------
+        if T == "s" and fichas > 0:
+           valorT = int(input("Quanto deseja apostar em Twelve? "))
+                    
+           if soma == 12:
+               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
+               fichas = fichas + 30*valorT
+               print("Voce ganhou Twelve e agora tem {0} fichas".format(fichas))
+           else:
+               print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))  
+               fichas = fichas - valorT
+               print("Voce perdeu Twelve e agora tem {0} fichas".format(fichas))
