@@ -33,7 +33,7 @@ while not fichas <= 0 :
         if PLB == "s":
             valorPLB = int(input("Quanto deseja apostar em Pass Line Bet? "))
         
-        print("\n O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado1, dado2, soma))
+        print("\nO resultado dos dados eh {0} e {1}, e a soma dos valores eh {2}".format(dado1, dado2, soma))
             
 #código separado para cada aposta, iniciando por Field e terminando com PLB ---------------------------------------------------------------------------------------------------------   
         
@@ -91,7 +91,7 @@ while not fichas <= 0 :
 
 #---------------------------------------------------------------------------------------------------------
            else:   #aqui vai para fase Point, pois resultado deu 4, 5, 6, 8, 9 ou 10 
-              print("Voce esta na fase POINT \n")
+              print("Voce nao ganhou, nem perdeu a Pass Line Bet, portanto, esta na fase POINT \n")
               print("Nesta fase, alem da continuacao do Point, voce possui tres opcoes de aposta: Field, Any Craps e Twelve.")
               
               F = input("Deseja apostar em Field (s ou n)? ")              
@@ -111,7 +111,7 @@ while not fichas <= 0 :
               somaPoint = dado3 + dado4
              
               print("Os dados serao jogados novamente")
-              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado3, dado4, somaPoint))
+              print("O resultado dos dados eh {0} e {1}, e a soma dos valores eh {2}".format(dado3, dado4, somaPoint))
 
 #código para Field na fase Point---------------------------------------------------------------------------
               if F == "s" and fichas > 0:
@@ -169,20 +169,20 @@ while not fichas <= 0 :
               elif somaPoint != 7 and somaPoint != soma and fichas > 0:             
                   contagem = 1
                   while somaPoint != soma and somaPoint != 7 :          
-                      print("\n Jogando os dados novamente ate perder ou validar") 
+                      print("\nJogando os dados novamente ate perder ou validar") 
                       dado3 = random.randint (1, 6)
                       dado4 = random.randint (1, 6)
                       somaPoint = dado3 + dado4
                       contagem += 1
-                      print("Voce esta na jogada de dados {0}. O resultado dos dados e {1} e {2}, e a soma dos valores e {3}".format(contagem, dado3, dado4, somaPoint))  
+                      print("\nVoce esta na jogada de dados {0}. O resultado dos dados e {1} e {2}, e a soma dos valores e {3}".format(contagem, dado3, dado4, somaPoint))  
                             
                       if somaPoint == 7:
                           fichas -= valorPLB                       
-                          print("\n Voce jogou os dados {0} vezes e perdeu Point e agora tem {1} fichas".format(contagem, fichas))
+                          print("\nVoce jogou os dados {0} vezes e perdeu Point e agora tem {1} fichas".format(contagem, fichas))
                     
                       elif somaPoint == soma :
                           fichas += valorPLB                        
-                          print("\n Voce jogou os dados {0} vezes e ganhou Point e agora tem {1} fichas".format(contagem, fichas))
+                          print("\nVoce jogou os dados {0} vezes e ganhou Point e agora tem {1} fichas".format(contagem, fichas))
 
 else:
-    print("\n GAME OVER")
+    print("\nGAME OVER")
