@@ -82,8 +82,8 @@ while not fichas <= 0 :
         if PLB == "s" and fichas > 0:
            print("\n Pass Line Bet: ") 
            if soma == 7 or soma == 11:  #aqui o jogador venceu, resultado deu 7 ou 11
-              fichas += valorPLB
-              print("Voce ganhou e agora tem {0} fichas".format(fichas))
+               fichas += valorPLB
+               print("Voce ganhou e agora tem {0} fichas".format(fichas))
                             
            elif  soma == 2 or  soma == 3 or  soma == 12:  #aqui o jogador perdeu
               fichas -= valorPLB
@@ -110,7 +110,7 @@ while not fichas <= 0 :
               dado4 = random.randint(1, 6)
               somaPoint = dado3 + dado4
              
-              print("Os dados serao jogados novamente")
+              print("\nOs dados serao jogados novamente\n")
               print("O resultado dos dados eh {0} e {1}, e a soma dos valores eh {2}".format(dado3, dado4, somaPoint))
 
 #código para Field na fase Point---------------------------------------------------------------------------
