@@ -108,23 +108,23 @@ while not fichas <= 0 :
               
               dado3 = random.randint(1, 6)
               dado4 = random.randint(1, 6)
-              soma1 = dado3 + dado4
+              somaPoint = dado3 + dado4
              
               print("Os dados serao jogados novamente")
-              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado3, dado4, soma1))
+              print("O resultado dos dados e {0} e {1}, e a soma dos valores e {2}".format(dado3, dado4, somaPoint))
 
 #código para Field na fase Point---------------------------------------------------------------------------
               if F == "s" and fichas > 0:
                  print("\n Field: ")   
-                 if soma1 == 5 or soma1 == 6 or soma1 == 7 or soma1 == 8:
+                 if somaPoint == 5 or somaPoint == 6 or somaPoint == 7 or somaPoint == 8:
                     fichas = fichas - valorF
                     print("Voce perdeu e agora tem {0} fichas".format(fichas))
                    
-                 elif soma1 == 3 or soma1 == 4 or soma1 == 9 or soma1 == 10 or soma1 == 11: 
+                 elif somaPoint == 3 or somaPoint == 4 or somaPoint == 9 or somaPoint == 10 or somaPoint == 11: 
                     fichas = fichas + valorF
                     print("Voce ganhou e agora tem {0} fichas".format(fichas))   # talvez mover a impressão do valor de fihcas para o fim de cada FASE, para nao repetir tantas vezes
                     
-                 elif soma1 == 2:
+                 elif somaPoint == 2:
                     fichas = fichas + 2*valorF
                     print("Voce ganhou e agora tem {0} fichas".format(fichas))
                     
@@ -136,7 +136,7 @@ while not fichas <= 0 :
                 
               if AC == "s" and fichas > 0:
                  print("\n Any Craps: ")   
-                 if soma1 == 2 or soma1 == 3 or soma1 == 12:
+                 if somaPoint == 2 or somaPoint == 3 or somaPoint == 12:
                     fichas = fichas + 7*valorAC
                     print("Voce ganhou e agora tem {0} fichas".format(fichas))
                     
@@ -148,7 +148,7 @@ while not fichas <= 0 :
 
               if T == "s" and fichas > 0:
                  print("\n Twelve:")   
-                 if soma1 == 12:
+                 if somaPoint == 12:
                     fichas = fichas + 30*valorT
                     print("Voce ganhou e agora tem {0} fichas".format(fichas))
                     
@@ -157,29 +157,29 @@ while not fichas <= 0 :
                     print("Voce perdeu e agora tem {0} fichas".format(fichas))
 
 #código abaixo para Point somente---------------------------------------------------------------------------------------------------------
-              if soma1 == 7 and fichas > 0:
+              if somaPoint == 7 and fichas > 0:
                  fichas = fichas - valorPLB
                  print("Voce perdeu a aposta em Point e agora tem {0} fichas".format(fichas))
                 
-              elif soma1 == soma and fichas > 0:
+              elif somaPoint == soma and fichas > 0:
                   fichas = fichas + valorPLB
                   print("Voce ganhou a aposta em Point e agora tem {0} fichas".format(fichas))
               
-              elif soma1 != 7 and soma1 != soma and fichas > 0:             
+              elif somaPoint != 7 and somaPoint != soma and fichas > 0:             
                   contagem = 1
-                  while soma1 != soma and soma1 != 7 :          
+                  while somaPoint != soma and somaPoint != 7 :          
                       print("\n Jogando os dados novamente ate perder ou validar") 
                       dado3 = random.randint (1, 6)
                       dado4 = random.randint (1, 6)
                       soma1 = dado3 + dado4
                       contagem += 1
-                      print("Voce esta na jogada de dados {0}. O resultado dos dados e {1} e {2}, e a soma dos valores e {3}".format(contagem, dado3, dado4, soma1))  
+                      print("Voce esta na jogada de dados {0}. O resultado dos dados e {1} e {2}, e a soma dos valores e {3}".format(contagem, dado3, dado4, somaPoint))  
                             
-                      if soma1 == 7:
+                      if somaPoint == 7:
                           fichas = fichas - valorPLB                       
                           print("\n Voce jogou os dados {0} vezes e perdeu Point e agora tem {1} fichas".format(contagem, fichas))
                     
-                      elif soma1 == soma :
+                      elif somaPoint == soma :
                           fichas = fichas + valorPLB                        
                           print("\n Voce jogou os dados {0} vezes e ganhou Point e agora tem {1} fichas".format(contagem, fichas))
 
