@@ -157,6 +157,7 @@ while not fichas <= 0 :
                     print("Voce perdeu e agora tem {0} fichas".format(fichas))
 
 #código abaixo para Point somente---------------------------------------------------------------------------------------------------------
+              print("\nContinuando a aposta em Pass Line Bet. O point é {0}\n".format(soma))
               if somaPoint == 7 and fichas > 0:
                  fichas = fichas - valorPLB
                  print("Voce perdeu a aposta em Point e agora tem {0} fichas".format(fichas))
