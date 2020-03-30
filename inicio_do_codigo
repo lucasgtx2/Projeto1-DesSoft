@@ -15,7 +15,7 @@ while not fichas <= 0 :
     
     if fase == "Come Out" and fichas > 0:
         print("Voce esta na fase: COME OUT. \n")
-        print("Nessa fase, voce possui quatro opcoes de aposta: Pass Line Bet, Field, Any Craps e Twelve. Escolha em quais deseja apostar, e a quantidade de fichas:") 
+        print("Nesta fase, voce possui quatro opcoes de aposta: Pass Line Bet, Field, Any Craps e Twelve. Escolha em quais deseja apostar, e determine a quantidade de fichas apostadas em cada escolha:") 
         
         F = input("Deseja apostar em Field (s ou n)? ")
         if F == "s":
@@ -92,7 +92,7 @@ while not fichas <= 0 :
 #---------------------------------------------------------------------------------------------------------
            else:   #aqui vai para fase Point, pois resultado deu 4, 5, 6, 8, 9 ou 10 
               print("Voce esta na fase POINT \n")
-              print("Nessa fase, voce possui tres opcoes de aposta, alem da continuacao do Point: Field, Any Craps e Twelve.")
+              print("Nesta fase, alem da continuacao do Point, voce possui tres opcoes de aposta: Field, Any Craps e Twelve.")
               
               F = input("Deseja apostar em Field (s ou n)? ")              
               if F == "s":
