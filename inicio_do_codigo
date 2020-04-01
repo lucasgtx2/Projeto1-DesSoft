@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 import random              
 fichas = 100
 print("Bem vindo ao jogo de Craps! \n")
-print("Voce possui inicialmente {0} fichas. \n".format(fichas))
+print("Você possui inicialmente {0} fichas. \n".format(fichas))
 
 #código que realiza loop até que as fichas acabem
 while not fichas <= 0 : 
@@ -14,8 +15,8 @@ while not fichas <= 0 :
 #início do jogo para fase Come Out:    
     
     if fase == "Come Out" and fichas > 0:
-        print("Voce esta na fase: COME OUT. \n")
-        print("Nesta fase, voce possui quatro opcoes de aposta: Pass Line Bet, Field, Any Craps e Twelve. Escolha em quais deseja apostar e determine a quantidade de fichas apostadas em cada escolha:") 
+        print("Você esta na fase: COME OUT. \n")
+        print("Nesta fase, você possui quatro opções de aposta: Pass Line Bet, Field, Any Craps e Twelve. Escolha em quais deseja apostar e determine a quantidade de fichas apostadas em cada escolha:") 
         
         F = input("Deseja apostar em Field (s ou n)? ")
         if F == "s":
@@ -42,19 +43,19 @@ while not fichas <= 0 :
            print("\n Field: ")                    
            if soma == 5 or soma == 6 or soma == 7 or soma == 8:
               fichas -= valorF
-              print("Voce perdeu e agora tem {0} fichas".format(fichas))
+              print("Você perdeu e agora tem {0} fichas".format(fichas))
                    
            elif soma == 3 or soma == 4 or soma == 9 or soma == 10 or soma == 11: 
               fichas += valorF
-              print("Voce ganhou e agora tem {0} fichas".format(fichas))   
+              print("Você ganhou e agora tem {0} fichas".format(fichas))   
                     
            elif soma == 2:  
               fichas += (2*(valorF))
-              print("Voce ganhou e agora tem {0} fichas".format(fichas))
+              print("Você ganhou e agora tem {0} fichas".format(fichas))
                     
            else: 
               fichas += (3*(valorF))
-              print("Voce ganhou e agora tem {0} fichas".format(fichas))
+              print("Você ganhou e agora tem {0} fichas".format(fichas))
                        
 #código abaixo para Any Craps na fase ComeOut-------------------------------------------------------------------------------------------------
                 
@@ -62,37 +63,37 @@ while not fichas <= 0 :
            print("\n Any Craps: ")             
            if soma == 2 or soma == 3 or soma == 12:  
               fichas += 7*valorAC
-              print("Voce ganhou e agora tem {0} fichas".format(fichas))
+              print("Você ganhou e agora tem {0} fichas".format(fichas))
                     
            else: 
                fichas -= valorAC
-               print("Voce perdeu e agora tem {0} fichas".format(fichas))
+               print("Você perdeu e agora tem {0} fichas".format(fichas))
               
 #código para Twelve na fase Comeout------------------------------------------------------------------------------------------------------------
         if T == "s" and fichas > 0:
            print("\n Twelve: ")         
            if soma == 12: 
                fichas += 30*valorT
-               print("Voce ganhou e agora tem {0} fichas".format(fichas))
+               print("Você ganhou e agora tem {0} fichas".format(fichas))
            else:  
                fichas -= valorT
-               print("Voce perdeu e agora tem {0} fichas".format(fichas))    
+               print("Você perdeu e agora tem {0} fichas".format(fichas))    
 
 #código para PLB em ComeOut--------------------------------------------------------------------------------------------------------------------
         if PLB == "s" and fichas > 0:
            print("\n Pass Line Bet: ") 
            if soma == 7 or soma == 11:  #aqui o jogador venceu, resultado deu 7 ou 11
                fichas += valorPLB
-               print("Voce ganhou e agora tem {0} fichas".format(fichas))
+               print("Você ganhou e agora tem {0} fichas".format(fichas))
                             
            elif  soma == 2 or  soma == 3 or  soma == 12:  #aqui o jogador perdeu
               fichas -= valorPLB
-              print("Voce perdeu e agora tem {0} fichas".format(fichas))
+              print("Você perdeu e agora tem {0} fichas".format(fichas))
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
            else:   #aqui vai para fase Point, pois resultado deu 4, 5, 6, 8, 9 ou 10 
-              print("Voce nao ganhou, nem perdeu a Pass Line Bet, portanto, esta na fase POINT \n")
-              print("Nesta fase, alem da continuacao do Point, voce possui tres opcoes de aposta: Field, Any Craps e Twelve.")
+              print("Você nao ganhou, nem perdeu a Pass Line Bet, portanto, esta na fase POINT \n")
+              print("Nesta fase, além da continuação do Point, você possui três opções de aposta: Field, Any Craps e Twelve.")
               
               F = input("Deseja apostar em Field (s ou n)? ")              
               if F == "s":
@@ -118,19 +119,19 @@ while not fichas <= 0 :
                  print("\n Field: ")   
                  if somaPoint == 5 or somaPoint == 6 or somaPoint == 7 or somaPoint == 8:
                     fichas -= valorF
-                    print("Voce perdeu e agora tem {0} fichas".format(fichas))
+                    print("Você perdeu e agora tem {0} fichas".format(fichas))
                    
                  elif somaPoint == 3 or somaPoint == 4 or somaPoint == 9 or somaPoint == 10 or somaPoint == 11: 
                     fichas += valorF
-                    print("Voce ganhou e agora tem {0} fichas".format(fichas))  
+                    print("Você ganhou e agora tem {0} fichas".format(fichas))  
                     
                  elif somaPoint == 2:
                     fichas += 2*valorF
-                    print("Voce ganhou e agora tem {0} fichas".format(fichas))
+                    print("Você ganhou e agora tem {0} fichas".format(fichas))
                     
                  else:
                     fichas += 3*valorF
-                    print("Voce ganhou e agora tem {0} fichas".format(fichas))
+                    print("Você ganhou e agora tem {0} fichas".format(fichas))
 
 #código abaixo para Any Craps na fase Point----------------------------------------------------------------------------------------------------
                 
@@ -138,11 +139,11 @@ while not fichas <= 0 :
                  print("\n Any Craps: ")   
                  if somaPoint == 2 or somaPoint == 3 or somaPoint == 12:
                     fichas += 7*valorAC
-                    print("Voce ganhou e agora tem {0} fichas".format(fichas))
+                    print("Você ganhou e agora tem {0} fichas".format(fichas))
                     
                  else: 
                     fichas -= valorAC
-                    print("Voce perdeu e agora tem {0} fichas".format(fichas))
+                    print("Você perdeu e agora tem {0} fichas".format(fichas))
 
 #código para Twelve na fase Point---------------------------------------------------------------------------------------------------------------
 
@@ -150,39 +151,39 @@ while not fichas <= 0 :
                  print("\n Twelve:")   
                  if somaPoint == 12:
                     fichas += 30*valorT
-                    print("Voce ganhou e agora tem {0} fichas".format(fichas))
+                    print("Você ganhou e agora tem {0} fichas".format(fichas))
                     
                  else:
                     fichas -= valorT
-                    print("Voce perdeu e agora tem {0} fichas".format(fichas))
+                    print("Você perdeu e agora tem {0} fichas".format(fichas))
 
 #código abaixo para Point somente---------------------------------------------------------------------------------------------------------------
               print("\nContinuando a aposta em Pass Line Bet. O point é {0}\n".format(soma))
               if somaPoint == 7 and fichas > 0:
                  fichas -= valorPLB
-                 print("Voce perdeu a aposta em Point e agora tem {0} fichas".format(fichas))
+                 print("Você perdeu a aposta em Point e agora tem {0} fichas".format(fichas))
                 
               elif somaPoint == soma and fichas > 0:
                   fichas += valorPLB
-                  print("Voce ganhou a aposta em Point e agora tem {0} fichas".format(fichas))
+                  print("Você ganhou a aposta em Point e agora tem {0} fichas".format(fichas))
               
               elif somaPoint != 7 and somaPoint != soma and fichas > 0:             
                   contagem = 1
                   while somaPoint != soma and somaPoint != 7 :          
-                      print("\nJogando os dados novamente ate perder ou validar") 
+                      print("\nJogando os dados novamente até perder ou validar") 
                       dado3 = random.randint (1, 6)
                       dado4 = random.randint (1, 6)
                       somaPoint = dado3 + dado4
                       contagem += 1
-                      print("\nVoce esta na jogada de dados {0}. O resultado dos dados eh {1} e {2}, e a soma dos valores eh {3}".format(contagem, dado3, dado4, somaPoint))  
+                      print("\nVocê esta na jogada de dados {0}. O resultado dos dados eh {1} e {2}, e a soma dos valores eh {3}".format(contagem, dado3, dado4, somaPoint))  
                             
                       if somaPoint == 7:
                           fichas -= valorPLB                       
-                          print("\nVoce jogou os dados {0} vezes e perdeu Point e agora tem {1} fichas".format(contagem, fichas))
+                          print("\nVocê jogou os dados {0} vezes e perdeu Point e agora tem {1} fichas".format(contagem, fichas))
                     
                       elif somaPoint == soma :
                           fichas += valorPLB                        
-                          print("\nVoce jogou os dados {0} vezes e ganhou Point e agora tem {1} fichas".format(contagem, fichas))
+                          print("\nVocê jogou os dados {0} vezes e ganhou Point e agora tem {1} fichas".format(contagem, fichas))
 
 else:
     print("\nGAME OVER")
