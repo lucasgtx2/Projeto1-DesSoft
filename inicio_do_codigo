@@ -92,12 +92,12 @@ while not fichas <= 0 :
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
            else:   #aqui vai para fase Point, pois resultado deu 4, 5, 6, 8, 9 ou 10 
-              print("Você nao ganhou, nem perdeu a Pass Line Bet, portanto, esta na fase POINT \n")
+              print("Você não ganhou, nem perdeu a Pass Line Bet, portanto, está na fase POINT \n")
               print("Nesta fase, além da continuação do Point, você possui três opções de aposta: Field, Any Craps e Twelve.")
               
               F = input("Deseja apostar em Field (s ou n)? ")              
               if F == "s":
-                  valorF = int(input("quanto deseja apostar em Field? "))
+                  valorF = int(input("Quanto deseja apostar em Field? "))
               
               AC = input("Deseja apostar em Any Craps (s ou n)? ")
               if AC == "s":
@@ -111,7 +111,7 @@ while not fichas <= 0 :
               dado4 = random.randint(1, 6)
               somaPoint = dado3 + dado4
              
-              print("\nOs dados serao jogados novamente\n")
+            print("\nOs dados serão jogados novamente\n")
               print("O resultado dos dados é {0} e {1}, e a soma dos valores é {2}".format(dado3, dado4, somaPoint))
 
 #código para Field na fase Point---------------------------------------------------------------------------------------------------------------
@@ -175,7 +175,7 @@ while not fichas <= 0 :
                       dado4 = random.randint (1, 6)
                       somaPoint = dado3 + dado4
                       contagem += 1
-                      print("\nVocê esta na jogada de dados {0}. O resultado dos dados é {1} e {2}, e a soma dos valores é {3}".format(contagem, dado3, dado4, somaPoint))  
+                      print("\nVocê está na jogada de dados {0}. O resultado dos dados é {1} e {2}, e a soma dos valores é {3}".format(contagem, dado3, dado4, somaPoint))  
                             
                       if somaPoint == 7:
                           fichas -= valorPLB                       
