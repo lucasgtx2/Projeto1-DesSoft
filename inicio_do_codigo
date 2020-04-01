@@ -34,7 +34,7 @@ while not fichas <= 0 :
         if PLB == "s":
             valorPLB = int(input("Quanto deseja apostar em Pass Line Bet? "))
         
-        print("\nO resultado dos dados eh {0} e {1}, e a soma dos valores eh {2}".format(dado1, dado2, soma))
+        print("\nO resultado dos dados é {0} e {1}, e a soma dos valores é {2}".format(dado1, dado2, soma))
             
 #código separado para cada aposta, iniciando por Field e terminando com PLB -----------------------------------------------------------------
         
@@ -112,7 +112,7 @@ while not fichas <= 0 :
               somaPoint = dado3 + dado4
              
               print("\nOs dados serao jogados novamente\n")
-              print("O resultado dos dados eh {0} e {1}, e a soma dos valores eh {2}".format(dado3, dado4, somaPoint))
+              print("O resultado dos dados é {0} e {1}, e a soma dos valores é {2}".format(dado3, dado4, somaPoint))
 
 #código para Field na fase Point---------------------------------------------------------------------------------------------------------------
               if F == "s" and fichas > 0:
@@ -175,7 +175,7 @@ while not fichas <= 0 :
                       dado4 = random.randint (1, 6)
                       somaPoint = dado3 + dado4
                       contagem += 1
-                      print("\nVocê esta na jogada de dados {0}. O resultado dos dados eh {1} e {2}, e a soma dos valores eh {3}".format(contagem, dado3, dado4, somaPoint))  
+                      print("\nVocê esta na jogada de dados {0}. O resultado dos dados é {1} e {2}, e a soma dos valores é {3}".format(contagem, dado3, dado4, somaPoint))  
                             
                       if somaPoint == 7:
                           fichas -= valorPLB                       
