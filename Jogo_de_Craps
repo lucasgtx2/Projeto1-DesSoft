@@ -7,13 +7,17 @@ print("Você possui inicialmente {0} fichas. \n".format(fichas))
 #código que realiza loop até que as fichas acabem
 while not fichas <= 0 : 
     fase = "Come Out"
-#randomizacão dos dados e armazena valor da soma dos resultados na variável "soma":
+#lançamento dos dados e armazenamento do valor da soma dos resultados na variável "soma":
     dado1 = random.randint(1, 6)
     dado2 = random.randint(1, 6)
     soma = dado1 + dado2
 
 #início do jogo para fase Come Out:    
-    
+    sair_ou_ficar = input("Deseja continuar no jogo ? (s ou n)")
+    if sair_ou_ficar == "n":
+        print("Fim do jogo! Você terminou com {0} fichas".format(fichas))
+        break 
+
     if fase == "Come Out" and fichas > 0:
         print("Você esta na fase: COME OUT. \n")
         print("Nesta fase, você possui quatro opções de aposta: Pass Line Bet, Field, Any Craps e Twelve. Escolha em quais deseja apostar e determine a quantidade de fichas apostadas em cada escolha:") 
@@ -169,6 +173,7 @@ while not fichas <= 0 :
               
               elif somaPoint != 7 and somaPoint != soma and fichas > 0:             
                   contagem = 1
+                  # Esse código realizará um "loop" até que a soma dos dados seja 7, ou igual ao point.
                   while somaPoint != soma and somaPoint != 7 :          
                       print("\nJogando os dados novamente até perder ou validar") 
                       dado3 = random.randint (1, 6)
